@@ -3,7 +3,8 @@ import './Button.css';
 
 
 const NumberButton = param => {
-  return (  <div className = "num"> 
+  return (  
+  <div className = {param.num}> 
   {param.number}
     </div> 
   );
@@ -11,5 +12,9 @@ const NumberButton = param => {
 };
 
 export default NumberButton;
+NumberButton.defaultProps ={
+    number:'you forgot to put a value in, you idiot',
+    num:'default'
+};
 
 
