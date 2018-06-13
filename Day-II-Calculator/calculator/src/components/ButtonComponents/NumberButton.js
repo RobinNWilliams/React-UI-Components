@@ -1,20 +1,18 @@
 import React from 'react';
 import './Button.css';
 
+const NumberButton = props => {
+return (
+    <div className= {props.name}>
+    {props.number}
+    </div>
+    );
+};
 
-const NumberButton = param => {
-  return (  
-  <div className = {param.num}> 
-  {param.number}
-    </div> 
-  );
-
+NumberButton.defaultProps ={
+    number:'you forgot to put a value in, you idiot',
+    name: 'default'
 };
 
 export default NumberButton;
-NumberButton.defaultProps ={
-    number:'you forgot to put a value in, you idiot',
-    num:'default'
-};
-
 
